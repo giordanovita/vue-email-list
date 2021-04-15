@@ -1,4 +1,4 @@
-function main(){
+/* function main(){
     $.ajax({
         url: "https://flynn.boolean.careers/exercises/api/random/mail",
         method: 'GET',
@@ -30,6 +30,71 @@ function addClickListener() {
 
 function init(){
     addClickListener()
+}
+
+
+document.addEventListener('DOMContentLoaded', init);
+ */
+
+
+
+
+
+
+
+function main(){
+    
+    for(let i=0;i<10;i++){
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            
+            .then(function (response) {
+                const result = response.data.response;
+                const target = document.getElementById('list')
+                 
+                target.append(result)
+    
+                
+                console.log(result);
+
+                });
+            }
+        }
+            
+
+
+
+/* function main(){
+    new Vue({
+        el:'#app',
+        data:{
+            emails:[]
+        },
+        mounted(){
+            this.axios()
+        },
+
+        methods:{
+                    
+            axios: function (){
+                        //  main()
+                    
+                        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                            
+                            .then(function (response) {
+                                const result = response.data;
+                                console.log(result);
+                                });
+                            }
+                            
+        }
+            
+    })
+    
+
+    }
+ */
+function init(){
+    main()
 }
 
 
