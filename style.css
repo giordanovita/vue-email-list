@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: purple;
+    color: white;
+  }
+
+  .container{
+      width: 100%;
+      height: 100vh;
+  }
+
+  .row{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+  }
+
+  #list{
+      color: black;
+      list-style-type: none;
+  }
+
+  #list li{
+    border: 2.5px solid white;
+    border-radius: 10px;
+    padding: 10px;
+
+    margin: 10px;
+
+
+  }
+
+
