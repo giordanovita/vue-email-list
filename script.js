@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 
-function main(){
+/* function main(){
     
     for(let i=0;i<10;i++){
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -58,12 +58,12 @@ function main(){
 
                 });
             }
-        }
+        } */
             
 
 
 
-/* function main(){
+ function main(){
     new Vue({
         el:'#app',
         data:{
@@ -76,23 +76,32 @@ function main(){
         methods:{
                     
             axios: function (){
-                        //  main()
-                    
+                        for(let i=0;i<10;i++){
+
                         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                             
-                            .then(function (response) {
-                                const result = response.data;
+                            .then(response => {
+                                const result = response.data.response;
+        
+                                this.emails.push(result)
                                 console.log(result);
-                                });
-                            }
-                            
-        }
-            
-    })
-    
+                                
+                            })
 
-    }
- */
+                        }
+
+            }
+
+        }
+
+                })
+            }
+            
+                            
+        
+            
+  
+ 
 function init(){
     main()
 }
